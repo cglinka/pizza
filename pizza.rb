@@ -17,6 +17,15 @@ module Pizza
     def vegetarian?
       @toppings.all? { |topping| topping.vegetarian }
     end
+
+    # Add a Pizza::Topping Object to the @toppings Array in the Pizza::Pie Object.
+    # 
+    # topping - the Pizza::Topping Object
+    #
+    # Returns the @toppings array with the new Pizza::Topping Object appended to it.
+    def add_topping(topping)
+      @toppings << topping
+    end
   end
 
   class Topping
