@@ -32,7 +32,7 @@ describe Pizza::Pie do
       ]
       pizza = Pizza::Pie.new(toppings)
 
-      expect(pizza.toppings.vegetarian?).to eq(true)
+      expect(pizza.vegetarian?).to eq(true)
     end
 
     it 'will return false if any of the toppings on a pizza' do
@@ -42,7 +42,7 @@ describe Pizza::Pie do
       ]
       pizza = Pizza::Pie.new(toppings)
 
-      expect(pizza.toppings.vegetarian?).to eq(false)
+      expect(pizza.vegetarian?).to eq(false)
     end
   end
 end 
