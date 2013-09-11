@@ -11,6 +11,12 @@ module Pizza
       @toppings = toppings
     end
 
+    # Check if a pizza has all vegtarian toppings.
+    #
+    # Returns a Boolean value.
+    def vegetarian?
+      @toppings.all? { |topping| topping.vegetarian }
+    end
   end
 
   class Topping
@@ -28,9 +34,3 @@ module Pizza
     end
   end
 end
-
-
-# if toppings
-#   @toppings = toppings
-# else
-#   @toppings = Pizza::Topping.new('cheese', vegetarian: true)
