@@ -7,12 +7,8 @@ module Pizza
     # topping - the array of toppings
     #
     # returns a new Pie object
-    def initialize(toppings = nil)
-      if toppings
-        @toppings = toppings
-      else
-        @toppings = [Pizza::Topping.new('cheese', vegetarian: true)]
-      end
+    def initialize(toppings = [Pizza::Topping.new('cheese', vegetarian: true)])
+      @toppings = toppings
     end
 
   end
