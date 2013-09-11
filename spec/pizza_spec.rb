@@ -48,7 +48,8 @@ describe Pizza::Pie do
   describe '#add_topping' do
     it 'will add a Topping Object to the @toppings array' do
       pizza = Pizza::Pie.new()
-      pizza.add_topping('onion', vegetarian: true)
+      onion = Pizza::Topping.new('onion', vegetarian: true)
+      pizza.add_topping(onion)
 
       expect(pizza.toppings.last.name).to eq('onion')
     end
