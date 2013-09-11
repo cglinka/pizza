@@ -1,5 +1,16 @@
 module Pizza
   class Pie
+    attr_accessor :toppings
+    
+    # Instantiate a new pizza including all the toppings.
+    # 
+    # topping - the array of toppings
+    #
+    # returns a new Pie object
+    def initialize(topping)
+      @toppings=topping
+    end
+
 
   end
 
