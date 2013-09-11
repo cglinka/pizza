@@ -15,8 +15,7 @@ describe Pizza::Pie do
       expect(pizza.toppings).to eq(toppings)
     end
 
-    it 'defaults the toppings to cheese only, 
-        if the pizza has no toppings' do
+    it 'defaults the toppings to cheese only, if the pizza has no toppings' do
       pizza = Pizza::Pie.new()
 
       expect(pizza.toppings.size).to eq(1)
@@ -43,6 +42,15 @@ describe Pizza::Pie do
       pizza = Pizza::Pie.new(toppings)
 
       expect(pizza.vegetarian?).to eq(false)
+    end
+  end
+
+  describe '#add_topping' do
+    it 'will add a Topping Object to the @toppings array' do
+      pizza = Pizza::Pie.new()
+      pizza.add_topping('onion', vegetarian: true)
+
+      expect(pizza.toppings.last.name).to eq('onion')
     end
   end
 end 
